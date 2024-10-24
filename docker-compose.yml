@@ -3,8 +3,7 @@ services:
     image: postgres:latest
     ports:
       - "5432:5432"
-    volumes:
-      - ${PROJECT_NAME}_pgdata:/var/lib/postgresql/data
-
-volumes:
-  ${PROJECT_NAME}_pgdata:
+    environment:
+      POSTGRES_USER: dev_user
+      POSTGRES_PASSWORD: dev_password
+      POSTGRES_PGDATABASE: dev_db
