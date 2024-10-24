@@ -1,0 +1,1 @@
+PGHOST=postgres only needs to be set if connecting to postgres from another docker container?
