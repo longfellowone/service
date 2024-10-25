@@ -4,5 +4,8 @@
     "prettier-plugin-classnames",
     "prettier-plugin-merge"
   ],
-  "printWidth": 80
+  "printWidth": 80,
+  "semi": false,
+  "singleQuote": true,
+  "trailingComma": "es5"
 }
