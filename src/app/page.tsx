@@ -1,7 +1,6 @@
 import prisma from "@/lib/prisma";
-import { Suspense } from "react";
 
-// Use this if not using dynamic APIs  to force SSR (not static)
+// Use this if not using dynamic APIs to force SSR (not static)
 // https://nextjs.org/docs/app/building-your-application/data-fetching/fetching†
 export const dynamic = "force-dynamic";
 
@@ -13,15 +12,15 @@ async function getTasks() {
 export default async function Home() {
   const tasks = await getTasks();
 
+  console.log(tasks);
+
   return (
     <div className="">
       <div>start</div>
-      <Suspense fallback={<div>Loading...</div>}>
-        {tasks.map((task) => (
-          <div key={task.id}>{task.name}</div>
-        ))}
-        <div>end</div>
-      </Suspense>
+      {tasks.map((task) => (
+        <div key={task.id}>{task.name}</div>
+      ))}
+      <div>end</div>
     </div>
   );
 }
