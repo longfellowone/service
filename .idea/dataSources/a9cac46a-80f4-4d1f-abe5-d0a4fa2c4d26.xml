@@ -3,7 +3,7 @@
   <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.53">
     <root id="1">
       <DateStyle>mdy</DateStyle>
-      <IntrospectionStateNumber>773</IntrospectionStateNumber>
+      <IntrospectionStateNumber>806</IntrospectionStateNumber>
       <ServerVersion>17.0</ServerVersion>
       <StartupTime>1729817429</StartupTime>
       <TimeZones>true ACDT
@@ -1393,23 +1393,20 @@ true posixrules
       <Grants>11||10|C|G
 11||-9223372036854775808|U|G
 11||10|U|G
-2200||6171|C|G
-2200||-9223372036854775808|U|G
-2200||6171|U|G
 13219||10|C|G
 13219||-9223372036854775808|U|G
 13219||10|U|G</Grants>
-      <IntrospectionStateNumber>773</IntrospectionStateNumber>
+      <IntrospectionStateNumber>806</IntrospectionStateNumber>
       <ObjectId>16385</ObjectId>
       <OwnerName>dev_user</OwnerName>
     </database>
-    <database id="3" parent="1" name="dev_user">
-      <ObjectId>16384</ObjectId>
-      <OwnerName>dev_user</OwnerName>
-    </database>
-    <database id="4" parent="1" name="postgres">
+    <database id="3" parent="1" name="postgres">
       <Comment>default administrative connection database</Comment>
       <ObjectId>5</ObjectId>
+      <OwnerName>dev_user</OwnerName>
+    </database>
+    <database id="4" parent="1" name="dev_user">
+      <ObjectId>16384</ObjectId>
       <OwnerName>dev_user</OwnerName>
     </database>
     <role id="5" parent="1" name="dev_user">
@@ -6526,139 +6523,138 @@ true posixrules
       <OwnerName>dev_user</OwnerName>
     </schema>
     <schema id="266" parent="2" name="public">
-      <Comment>standard public schema</Comment>
       <Current>1</Current>
-      <IntrospectionStateNumber>773</IntrospectionStateNumber>
-      <LastIntrospectionLocalTimestamp>2024-10-25.03:05:57</LastIntrospectionLocalTimestamp>
-      <ObjectId>2200</ObjectId>
-      <StateNumber>532</StateNumber>
-      <OwnerName>pg_database_owner</OwnerName>
+      <IntrospectionStateNumber>806</IntrospectionStateNumber>
+      <LastIntrospectionLocalTimestamp>2024-10-25.04:48:34</LastIntrospectionLocalTimestamp>
+      <ObjectId>16410</ObjectId>
+      <StateNumber>776</StateNumber>
+      <OwnerName>dev_user</OwnerName>
     </schema>
-    <sequence id="267" parent="266" name="Task_id_seq">
-      <ObjectId>16399</ObjectId>
+    <sequence id="267" parent="266" name="task_id_seq">
+      <ObjectId>16463</ObjectId>
       <SequenceIdentity>1</SequenceIdentity>
       <StartValue>1</StartValue>
-      <StateNumber>751</StateNumber>
+      <StateNumber>803</StateNumber>
       <StoredType>integer|0s</StoredType>
       <OwnerName>dev_user</OwnerName>
     </sequence>
-    <table id="268" parent="266" name="Task">
-      <ObjectId>16400</ObjectId>
-      <StateNumber>751</StateNumber>
+    <table id="268" parent="266" name="_prisma_migrations">
+      <ObjectId>16411</ObjectId>
+      <StateNumber>777</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>dev_user</OwnerName>
     </table>
-    <table id="269" parent="266" name="_prisma_migrations">
-      <ObjectId>16388</ObjectId>
-      <StateNumber>745</StateNumber>
+    <table id="269" parent="266" name="task">
+      <ObjectId>16464</ObjectId>
+      <StateNumber>803</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>dev_user</OwnerName>
     </table>
     <column id="270" parent="268" name="id">
-      <DefaultExpression>nextval(&apos;&quot;Task_id_seq&quot;&apos;::regclass)</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <StateNumber>751</StateNumber>
-      <StoredType>integer|0s</StoredType>
-      <SequenceId>16399</SequenceId>
-      <TypeId>23</TypeId>
-    </column>
-    <column id="271" parent="268" name="name">
-      <NotNull>1</NotNull>
-      <Position>2</Position>
-      <StateNumber>751</StateNumber>
-      <StoredType>varchar(255)|0s</StoredType>
-      <TypeId>1043</TypeId>
-    </column>
-    <index id="272" parent="268" name="Task_pkey">
-      <ColNames>id</ColNames>
-      <NameSurrogate>1</NameSurrogate>
-      <ObjectId>16404</ObjectId>
-      <Primary>1</Primary>
-      <StateNumber>751</StateNumber>
-      <Unique>1</Unique>
-      <AccessMethodId>403</AccessMethodId>
-    </index>
-    <key id="273" parent="268" name="Task_pkey">
-      <NameSurrogate>1</NameSurrogate>
-      <ObjectId>16405</ObjectId>
-      <Primary>1</Primary>
-      <StateNumber>751</StateNumber>
-      <UnderlyingIndexId>16404</UnderlyingIndexId>
-    </key>
-    <column id="274" parent="269" name="id">
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-      <StateNumber>745</StateNumber>
+      <StateNumber>777</StateNumber>
       <StoredType>varchar(36)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
-    <column id="275" parent="269" name="checksum">
+    <column id="271" parent="268" name="checksum">
       <NotNull>1</NotNull>
       <Position>2</Position>
-      <StateNumber>745</StateNumber>
+      <StateNumber>777</StateNumber>
       <StoredType>varchar(64)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
-    <column id="276" parent="269" name="finished_at">
+    <column id="272" parent="268" name="finished_at">
       <Position>3</Position>
-      <StateNumber>745</StateNumber>
+      <StateNumber>777</StateNumber>
       <StoredType>timestamp with time zone|0s</StoredType>
       <TypeId>1184</TypeId>
     </column>
-    <column id="277" parent="269" name="migration_name">
+    <column id="273" parent="268" name="migration_name">
       <NotNull>1</NotNull>
       <Position>4</Position>
-      <StateNumber>745</StateNumber>
+      <StateNumber>777</StateNumber>
       <StoredType>varchar(255)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
-    <column id="278" parent="269" name="logs">
+    <column id="274" parent="268" name="logs">
       <Position>5</Position>
-      <StateNumber>745</StateNumber>
+      <StateNumber>777</StateNumber>
       <StoredType>text|0s</StoredType>
       <TypeId>25</TypeId>
     </column>
-    <column id="279" parent="269" name="rolled_back_at">
+    <column id="275" parent="268" name="rolled_back_at">
       <Position>6</Position>
-      <StateNumber>745</StateNumber>
+      <StateNumber>777</StateNumber>
       <StoredType>timestamp with time zone|0s</StoredType>
       <TypeId>1184</TypeId>
     </column>
-    <column id="280" parent="269" name="started_at">
+    <column id="276" parent="268" name="started_at">
       <DefaultExpression>now()</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>7</Position>
-      <StateNumber>745</StateNumber>
+      <StateNumber>777</StateNumber>
       <StoredType>timestamp with time zone|0s</StoredType>
       <TypeId>1184</TypeId>
     </column>
-    <column id="281" parent="269" name="applied_steps_count">
+    <column id="277" parent="268" name="applied_steps_count">
       <DefaultExpression>0</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>8</Position>
-      <StateNumber>745</StateNumber>
+      <StateNumber>777</StateNumber>
       <StoredType>integer|0s</StoredType>
       <TypeId>23</TypeId>
     </column>
-    <index id="282" parent="269" name="_prisma_migrations_pkey">
+    <index id="278" parent="268" name="_prisma_migrations_pkey">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>16395</ObjectId>
+      <ObjectId>16418</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>745</StateNumber>
+      <StateNumber>777</StateNumber>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
       <CollationNames>default</CollationNames>
       <CollationIds>100</CollationIds>
       <CollationParentNames>pg_catalog</CollationParentNames>
     </index>
-    <key id="283" parent="269" name="_prisma_migrations_pkey">
+    <key id="279" parent="268" name="_prisma_migrations_pkey">
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>16396</ObjectId>
+      <ObjectId>16419</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>745</StateNumber>
-      <UnderlyingIndexId>16395</UnderlyingIndexId>
+      <StateNumber>777</StateNumber>
+      <UnderlyingIndexId>16418</UnderlyingIndexId>
+    </key>
+    <column id="280" parent="269" name="id">
+      <DefaultExpression>nextval(&apos;task_id_seq&apos;::regclass)</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StateNumber>803</StateNumber>
+      <StoredType>integer|0s</StoredType>
+      <SequenceId>16463</SequenceId>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="281" parent="269" name="name">
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StateNumber>803</StateNumber>
+      <StoredType>varchar(255)|0s</StoredType>
+      <TypeId>1043</TypeId>
+    </column>
+    <index id="282" parent="269" name="task_pkey">
+      <ColNames>id</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>16468</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>803</StateNumber>
+      <Unique>1</Unique>
+      <AccessMethodId>403</AccessMethodId>
+    </index>
+    <key id="283" parent="269" name="task_pkey">
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>16469</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>803</StateNumber>
+      <UnderlyingIndexId>16468</UnderlyingIndexId>
     </key>
   </database-model>
 </dataSource>
