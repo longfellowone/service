@@ -20,11 +20,9 @@ export default async function Home() {
 
   return (
     <div className="">
-      <div>start</div>
       {tasks.map((task) => (
         <div key={task.id}>{task.name}</div>
       ))}
-      <div>end</div>
     </div>
   )
 }
