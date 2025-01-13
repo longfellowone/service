@@ -11,18 +11,9 @@ Webstorm
 - Cmd + B, go to
 - Ctrl + Tab, switch between open files
 
-React forms
+Data management
 
-- Use zod-form-data, not sure if zod is also needed?
-- https://x.com/rwieruch/status/1857105224806068629/photo/1
-
-Tailwind
-
-- Tailwind fold
-
-Font
-
-- Inter using next/font?
+- https://nextjs.org/blog/security-nextjs-server-components-actions#component-level-data-access
 
 Prisma
 
@@ -31,6 +22,24 @@ Prisma
 - npx prisma db push (use when prototyping)
 - npx prisma migrate dev (use when developing while in production)
 - Use @@index
+
+Forms
+
+- Use zod-form-data, not sure if zod is also needed?
+- https://x.com/rwieruch/status/1857105224806068629/photo/1
+- https://www.youtube.com/watch?v=KhO4VjaYSXU
+
+Save state to URL
+
+- https://nuqs.47ng.com/
+
+Tailwind
+
+- Tailwind fold
+
+Font
+
+- Inter using next/font?
 
 React Aria Components (headless components)
 https://react-spectrum.adobe.com/react-aria/components.html
