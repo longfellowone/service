@@ -10,26 +10,26 @@
     "vercel-build": "prisma generate && prisma migrate deploy && next build"
   },
   "dependencies": {
-    "@prisma/client": "^6.2.1",
-    "babel-plugin-react-compiler": "^19.0.0-beta-df7b47d-20241124",
-    "next": "15.1.4",
-    "react": "19.0.0",
-    "react-dom": "19.0.0"
+    "@prisma/client": "^6.8.2",
+    "babel-plugin-react-compiler": "^19.1.0-rc.2",
+    "next": "15.3.2",
+    "react": "19.1.0",
+    "react-dom": "19.1.0"
   },
   "devDependencies": {
     "@types/node": "^22",
     "@types/react": "^19",
     "@types/react-dom": "^19",
-    "autoprefixer": "^10.4.20",
+    "autoprefixer": "^10.4.21",
     "eslint": "^9",
-    "eslint-config-next": "15.1.4",
+    "eslint-config-next": "15.3.2",
     "postcss": "^8",
-    "prettier": "^3.4.2",
-    "prettier-plugin-classnames": "^0.7.5",
-    "prettier-plugin-merge": "^0.7.2",
-    "prettier-plugin-tailwindcss": "^0.6.9",
-    "prisma": "^6.2.1",
-    "tailwindcss": "^3.4.17",
+    "prettier": "^3.5.3",
+    "prettier-plugin-classnames": "^0.7.8",
+    "prettier-plugin-merge": "^0.7.3",
+    "prettier-plugin-tailwindcss": "^0.6.11",
+    "prisma": "^6.8.2",
+    "tailwindcss": "^4.1.7",
     "typescript": "^5"
   }
 }

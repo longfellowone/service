@@ -15,6 +15,10 @@ Data management
 
 - https://nextjs.org/blog/security-nextjs-server-components-actions#component-level-data-access
 
+Auth
+
+- https://lucia-auth.com/
+
 Prisma
 
 - Turn on relation queries
